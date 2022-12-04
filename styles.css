@@ -7,7 +7,7 @@
     --clr-neutral-darkgreyblue: hsl(236, 13%, 42%);
     --clr-neutral-verydarkblue: hsl(240, 100%, 5%);
 
-    --ff-all: "Inter", serif;
+    --ff-all: 'Inter', serif;
 }
 /*
   Josh's Custom CSS Reset
@@ -21,10 +21,15 @@
   }
   html, body {
     height: 100%;
+    font-family: var(--ff-all);
   }
   body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    background-color: var(--clr-neutral-offwhite);
+  }
+  .mobile-nav-toggle {
+    display: none;
   }
   img, picture, video, canvas, svg {
     display: block;
@@ -39,3 +44,83 @@
   #root, #__next {
     isolation: isolate;
   }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+  /* Navigation styles */
+
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .main-nav {
+    display: flex;
+    list-style: none;
+  }
+  li {
+    margin-inline-end: 0.75em;
+  }
+  @media(max-width: 35em) {
+     .main-nav {
+           position: fixed;
+           inset: 0 0 0 30%;
+           background-color: var(--clr-neutral-offwhite);
+           flex-direction: column;
+           z-index: 1000;
+           padding: min(30vh, 10em) 2em;
+           row-gap: 1.7em;
+    }
+    .mobile-nav-toggle {
+        display: block;
+        z-index: 9999;
+        position: absolute;
+        background: red;
+        width: 2rem;
+        aspect-ratio: 1;
+        top: 2rem;
+        right: 2rem;
+        background: url(assets/images/icon-menu.svg);
+        background-repeat: no-repeat;
+        border: 0;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
