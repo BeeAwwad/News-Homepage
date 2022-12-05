@@ -103,11 +103,6 @@
     }
   }
 
-  /* Main News */
-.main-news {
-  background-color: palegreen;
-}
-
 /* Button */
 .button-58 {
   align-items: center;
@@ -160,6 +155,23 @@
   }
 }
 
+.main-container {
+  display: grid;
+  gap: 1.7rem;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Main News */
+.main-story {
+  background-color: palegreen;
+  display: flex;
+  flex-direction: column;
+}
+.main-h1 {
+  display: flex;
+}
+
+
 /* New News */
 .more-news {
   color: var(--clr-neutral-offwhite);
@@ -167,10 +179,18 @@
 }
 
 /* Top 3 News */
-.trending-news {
+.top-1 {
   background-color: salmon;
+  display: flex;
 }
-
+.top-2 {
+  background-color: aqua;
+  display: flex;
+}
+.top-3 {
+  background-color: deeppink;
+  display: flex;
+}
 
 
 
