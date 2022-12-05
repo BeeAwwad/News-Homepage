@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
     <title>W. News</title>
 </head>
 <body>
@@ -19,7 +20,7 @@
 
         <button class="mobile-nav-toggle" aria-controls="main-navigation" aria-expanded="false"><span class="sr-only">Menu</span></button>
         <nav>
-            <ul id="main-navigation" class="main-nav">
+            <ul data-visible="false" id="main-navigation" class="main-nav">
                 <li>Home</li>
                 <li>New</li>
                 <li>Popular</li>

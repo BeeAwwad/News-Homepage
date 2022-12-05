@@ -27,6 +27,7 @@
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     background-color: var(--clr-neutral-offwhite);
+    overflow-x: hidden;
   }
   .mobile-nav-toggle {
     display: none;
@@ -77,6 +78,8 @@
            z-index: 1000;
            padding: min(30vh, 10em) 2em;
            row-gap: 1.7em;
+           transform: translate(100%);
+           transition: transform 350ms ease-out;
     }
     .mobile-nav-toggle {
         display: block;
@@ -87,9 +90,16 @@
         aspect-ratio: 1;
         top: 2rem;
         right: 2rem;
-        background: url(assets/images/icon-menu.svg);
+        background-color: transparent;
+        background-image: url(assets/images/icon-menu.svg);
         background-repeat: no-repeat;
         border: 0;
+    }
+    .mobile-nav-toggle[aria-expanded = "true"]{
+      background-image: url(assets/images/icon-menu-close.svg);
+    }
+    .main-nav[data-visible="true"] {
+        transform: translate(0%); 
     }
   }
 
