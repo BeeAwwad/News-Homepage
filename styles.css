@@ -158,7 +158,8 @@
 .main-container {
   display: grid;
   gap: 1.7rem;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 }
 
 /* Main News */
@@ -171,6 +172,12 @@
   display: flex;
 }
 
+.grid-row-span2 {
+  grid-row: span 2;
+}
+.grid-col-span2 {
+  grid-column: span 2;
+}
 
 /* New News */
 .more-news {
