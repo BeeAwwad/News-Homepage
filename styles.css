@@ -58,13 +58,16 @@
   }
   /* Navigation styles */
 
-  header {
-    display: flex;
-    justify-content: space-between;
-  }
-  .main-nav {
-    display: flex;
+
+  .main-nav li {
+    display: inline;
     list-style: none;
+    text-decoration: none;
+    margin-left: 30px;;
+  }
+  .main-nav li a {
+    text-decoration: none;
+    color: var(--clr-neutral-verydarkblue);
   }
   li {
     margin-inline-end: 0.75em;
@@ -74,6 +77,7 @@
            position: fixed;
            inset: 0 0 0 30%;
            background-color: var(--clr-neutral-offwhite);
+           display: flex;
            flex-direction: column;
            z-index: 1000;
            padding: min(30vh, 10em) 2em;
@@ -156,53 +160,88 @@
 }
 
 .main-container {
-  display: grid;
-  gap: 1.7rem;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+    display: grid;
+    gap: 1.7rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 0.33333333fr repeat(3, 1fr);
+    grid-template-areas:
+     "header header header"
+     "content content news"
+     "content content news"
+     "trend1 trend2 trend3";
 }
-
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 0;
+  grid-area: header;
+  background-color: #06f;
+}
 /* Main News */
 .main-story {
   background-color: palegreen;
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
+  grid-area: content;
 }
 .main-h1 {
   display: flex;
+  min-height: 50%;
+}
+.main-h1 h1 {
+  font-size: 40px;
+  font-weight: 800;
+  max-width: 50%;
+}
+.main-text {
+  max-width: 50%;
+  font-size: 15px;
 }
 
-.grid-row-span2 {
+/* .grid-row-span3 {
+  grid-row: span 3;
+} */
+/* .grid-row-span2 {
   grid-row: span 2;
 }
 .grid-col-span2 {
   grid-column: span 2;
-}
+} */
 
 /* New News */
 .more-news {
   color: var(--clr-neutral-offwhite);
   background-color: var(--clr-neutral-verydarkblue);
+  grid-area: news;
 }
 
 /* Top 3 News */
 .top-1 {
   background-color: salmon;
   display: flex;
+  grid-area: trend1;
 }
 .top-2 {
   background-color: aqua;
   display: flex;
+  grid-area: trend2;
 }
 .top-3 {
   background-color: deeppink;
   display: flex;
+  grid-area: trend3;
 }
 
+/* All Image */
 
+.main-image  {
+ max-height: 50%;
+ max-width: 50%;
+}
 
+.main-image picture img {
 
-
+}
 
 
 
