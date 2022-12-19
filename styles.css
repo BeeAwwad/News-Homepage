@@ -28,6 +28,7 @@
     -webkit-font-smoothing: antialiased;
     background-color: var(--clr-neutral-offwhite);
     overflow-x: hidden;
+    overflow-y: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,12 +71,13 @@
   grid-template-rows: 80px repeat(2, 200px) 125px;
   grid-template-areas:
     "header header header"
-     "image image news"
+     "content content news"
      "content content news"
      "trend1 trend2 trend3";
      margin-top: 10%;
      margin-bottom: 4%;
 }
+
 
   /* Navigation styles */
 .navigation_bar {
@@ -83,15 +85,70 @@
   display: flex;
   justify-content: space-between;
 }
-
 .main-nav{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
 }
+.main-nav li {
+  list-style: none;
+  margin-left: 30px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.main-nav li a {
+  text-decoration: none;
+  color: var(--clr-neutral-verydarkblue);
+}
+.logo {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+@media(max-width: 35em) {
+  .main-nav {
+        position: fixed;
+        inset: 0 0 0 30%;
+        background-color: var(--clr-neutral-offwhite);
+        display: flex;
+        flex-direction: column;
+        z-index: 1000;
+        padding: min(30vh, 10em) 2em;
+        row-gap: 1.7em;
+        transform: translate(100%);
+        transition: transform 350ms ease-out;
+ }
+ .mobile-nav-toggle {
+     display: block;
+     z-index: 9999;
+     position: absolute;
+     background: red;
+     width: 2rem;
+     aspect-ratio: 1;
+     top: 2rem;
+     right: 2rem;
+     background-color: transparent;
+     background-image: url(assets/images/icon-menu.svg);
+     background-repeat: no-repeat;
+     border: 0;
+ }
+ .mobile-nav-toggle[aria-expanded = "true"]{
+   background-image: url(assets/images/icon-menu-close.svg);
+ }
+ .main-nav[data-visible="true"] {
+     transform: translate(0%); 
+ }
+} 
 
 /* Image */
 .main-image {
-  grid-area: image;
+  background-image: url('assets/images/image-web-3-desktop.jpg');
+  background-repeat: no-repeat;
+  /* background-size: contain; */
+  background-size: 100% 100%;
+  height: 250px;
+  width: 100%;
+  border: 3px solid red;
+
 }
 picture {
   object-fit: fill;
@@ -101,12 +158,57 @@ picture {
 .main-story {
   grid-area: content;
 }
-
-/* Main Story */
-.more-news {
-  grid-area: news;
-  display: flex;
+.main-h1 {
+  padding-top: 1.7em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
+.main-h1 h1 {
+  font-size: 42px;
+  font-weight: 800;
+  padding-right: 15px;
+}
+.main-text {
+  font-size: 15px;
+} 
+.main-text p {
+  margin-bottom: 2.8em;
+}
+
+/* More News */
+.more-news {
+  color: var(--clr-neutral-offwhite);
+  background-color: var(--clr-neutral-verydarkblue);
+  grid-area: news;
+  padding: 1.8em 1.3em;
+}
+.more-news h2 {
+  color: var(--clr-primary-orange);
+  font-size: 30px;
+}
+.fresh-news {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-bottom: #5c636e solid 1.5px;
+}
+.fresh-news p {
+  color: #738598;
+}
+@media(max-width: 1536px){
+  .fresh-news p {
+    font-size: 13px;
+  }
+}
+.fresh-news .topic {
+  color: var(--clr-neutral-offwhite);
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.more-news :last-child{
+  border: none;
+}
+
 
 /* Popular News */
 .top-1 {
@@ -124,9 +226,57 @@ picture {
   display: flex;
 }
 
+/* button */
 
 
+.button-58 {
+  align-items: center;
+  background-color: var(--clr-primary-red);
+  box-sizing: border-box;
+  color: var(--clr-neutral-offwhite);
+  cursor: pointer;
+  display: inline-flex;
+  fill: var(--clr-neutral-offwhite);
+  border: none;
+  font-family: var(--ff-all);
+  font-size: 16px;
+  font-weight: 600;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: -.8px;
+  line-height: 24px;
+  min-width: 140px;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
 
+.button-58:focus {
+  color: var(--clr-neutral-offwhite);
+}
+
+.button-58:hover {
+  background-color: var(--clr-neutral-verydarkblue);
+  color: var(--clr-neutral-offwhite);
+  fill: var(--clr-neutral-verydarkblue);
+}
+
+.button-58:active {
+  background-color: var(--clr-neutral-verydarkblue);
+  color: var(--clr-neutral-offwhite);
+  fill: var(--clr-neutral-verydarkblue);
+}
+
+@media (min-width: 768px) {
+  .button-58 {
+    min-width: 170px;
+  }
+}
 
 
 
