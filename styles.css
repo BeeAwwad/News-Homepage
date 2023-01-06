@@ -62,9 +62,8 @@
   }
   /* Container Styles */
 .main-container {
-  /* background-color: var(--clr-neutral-greyishblue); */
   height: 100%;
-  width: 70%;
+  width: 72%;
   display: grid;
   gap: 3em;
   grid-template-columns: repeat(3, 1fr);
@@ -98,7 +97,7 @@
 }
 .main-nav li a {
   text-decoration: none;
-  color: var(--clr-neutral-verydarkblue);
+  color: rgba(0, 0, 0, 0.6);
 }
 .logo {
   margin-top: 25px;
@@ -143,7 +142,6 @@
 .main-image {
   background-image: url('assets/images/image-web-3-desktop.jpg');
   background-repeat: no-repeat;
-  /* background-size: contain; */
   background-size: 100% 100%;
   height: 250px;
   width: 100%;
@@ -159,20 +157,21 @@ picture {
   grid-area: content;
 }
 .main-h1 {
-  padding-top: 1.7em;
+  padding-top: 2%;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 .main-h1 h1 {
-  font-size: 42px;
-  font-weight: 800;
-  padding-right: 15px;
+  font-size: 45px;
+  font-weight: 900;
+  margin-right: 16%;
 }
 .main-text {
   font-size: 15px;
+  padding: 2%;
 } 
 .main-text p {
-  margin-bottom: 2.8em;
+  margin-bottom: 13%;
 }
 
 /* More News */
@@ -278,7 +277,76 @@ picture {
   }
 }
 
+.top-1 {
+  /* background-color: salmon; */
+  display: flex;
+  grid-area: trend1;
+}
+.top-one {
+  padding: 0 0.75em;
+}
+.top-one p {
+  margin-top: 3.5px;
+  font-size: 80%;
+}
+.top-1 .topic {
+  font-size: 17px;
+  font-weight: 700;
+}
+.top-1 .ranking {
+  font-size: 1.6875em;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.2);
+}
 
+
+.top-2 {
+  /* background-color: aqua; */
+  display: flex;
+  grid-area: trend2;
+}
+.top-two {
+  padding: 0 0.75em;
+}
+.top-two p {
+  margin-top: 3.5px;
+  font-size: 80%;
+}
+.top-2 .topic {
+  font-size: 17px;
+  font-weight: 700;
+}
+.top-2 .ranking {
+  font-size: 1.6875em;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+
+.top-3 {
+  /* background-color: deeppink; */
+  display: flex;
+  grid-area: trend3;
+}
+.top-three {
+  padding: 0 0.75em;
+}
+.top-three p {
+  margin-top: 3.5px;
+  font-size: 80%;
+}
+.top-3 .topic {
+  font-size: 17px;
+  font-weight: 700;
+}
+.top-3 .ranking {
+  font-size: 1.6875em;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.2);
+}
+.trend-text {
+  color: rgba(0, 0, 0, 0.6);
+}
 
 
 
