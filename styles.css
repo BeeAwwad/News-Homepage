@@ -28,7 +28,7 @@
     -webkit-font-smoothing: antialiased;
     background-color: var(--clr-neutral-offwhite);
     overflow-x: hidden;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,7 +74,7 @@
      "content content news"
      "trend1 trend2 trend3";
      margin-top: 10%;
-     margin-bottom: 4%;
+     margin-bottom: 5%;
 }
 
 
@@ -145,8 +145,6 @@
   background-size: 100% 100%;
   height: 250px;
   width: 100%;
-  border: 3px solid red;
-
 }
 picture {
   object-fit: fill;
@@ -171,7 +169,7 @@ picture {
   padding: 2%;
 } 
 .main-text p {
-  margin-bottom: 13%;
+  margin-bottom: 12%;
 }
 
 /* More News */
@@ -278,7 +276,6 @@ picture {
 }
 
 .top-1 {
-  /* background-color: salmon; */
   display: flex;
   grid-area: trend1;
 }
@@ -286,11 +283,11 @@ picture {
   padding: 0 0.75em;
 }
 .top-one p {
-  margin-top: 3.5px;
+  margin-top: 1.519777%;
   font-size: 80%;
 }
-.top-1 .topic {
-  font-size: 17px;
+.top-one .topic {
+  font-size: 105%;
   font-weight: 700;
 }
 .top-1 .ranking {
@@ -301,7 +298,6 @@ picture {
 
 
 .top-2 {
-  /* background-color: aqua; */
   display: flex;
   grid-area: trend2;
 }
@@ -309,11 +305,11 @@ picture {
   padding: 0 0.75em;
 }
 .top-two p {
-  margin-top: 3.5px;
+  margin-top: 1.519777%;
   font-size: 80%;
 }
-.top-2 .topic {
-  font-size: 17px;
+.top-two .topic {
+  font-size: 105%;
   font-weight: 700;
 }
 .top-2 .ranking {
@@ -324,7 +320,6 @@ picture {
 
 
 .top-3 {
-  /* background-color: deeppink; */
   display: flex;
   grid-area: trend3;
 }
@@ -332,11 +327,11 @@ picture {
   padding: 0 0.75em;
 }
 .top-three p {
-  margin-top: 3.5px;
+  margin-top: 1.519777%;
   font-size: 80%;
 }
-.top-3 .topic {
-  font-size: 17px;
+.top-three .topic {
+  font-size: 105%;
   font-weight: 700;
 }
 .top-3 .ranking {
