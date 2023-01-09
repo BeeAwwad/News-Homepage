@@ -164,7 +164,7 @@ picture {
   grid-template-columns: 1fr 1fr;
 }
 .main-h1 h1 {
-  font-size: 45px;
+  font-size: 280%;
   font-weight: 900;
   margin-right: 16%;
 }
@@ -347,11 +347,42 @@ picture {
   }
 }
 
-@media(max-width: 450px) {
+@media(max-width: 1300px) {
+  .main-container {
+    width: 75%;
+    display: grid;
+    gap: 3em;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 80px repeat(2, 200px) repeat(3, 110px);
+    grid-template-areas:
+      "header header"
+       "content content"
+       "content content"
+       "trend1 news"
+       "trend2 news"
+       "trend3 news";
+    margin-bottom: 0%;
+  }
+  .main-h1 h1 {
+    margin-left: 0%;
+    font-size: 230%;
+  }
+  .top-1 .ranking {
+    font-size: 24px;
+  }
+  .top-2 .ranking {
+    font-size: 24px;
+  }
+  .top-3 .ranking {
+    font-size: 24px;
+  }
+}
+
+@media(max-width: 600px) {
   .main-container {
     display: flex;
     flex-direction: column;
-    margin-top: 0%;
+    margin-top: 10%;
     width: 90%;
   }
   .main-image {
