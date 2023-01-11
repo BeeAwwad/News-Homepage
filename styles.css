@@ -109,7 +109,7 @@
 }
 @media(max-width: 35em) {
   .main-nav {
-        position: absolute;
+        position: fixed;
         inset: 0 0 0 30%;
         background-color: var(--clr-neutral-offwhite);
         display: flex;
