@@ -387,7 +387,15 @@ picture {
   }
 }
 
-@media(max-width: 650px){
+@media(max-width: 850px){
+  .main-container {
+    width: 85%;
+    grid-template-rows: 80px repeat(2, 200px) 150px;
+  }
+  .img-trend {
+    max-width: 40%;
+    max-height: 125px;
+  }
   .fresh-news p {
     font-size: 12px;
   }
